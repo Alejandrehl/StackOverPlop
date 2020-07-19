@@ -5,7 +5,7 @@ const Model = use('Model')
 
 class Message extends Model {
     thread () {
-        return this.belongsTo('APp/Models/Thread')
+        return this.belongsTo('App/Models/Thread')
     }
 }
 
