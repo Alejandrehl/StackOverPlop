@@ -7,6 +7,7 @@ class ThreadSchema extends Schema {
   up () {
     this.create('threads', (table) => {
       table.increments()
+      table.string('name').notNullable()
       table.timestamps()
     })
   }

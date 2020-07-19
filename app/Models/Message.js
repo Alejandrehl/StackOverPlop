@@ -4,6 +4,9 @@
 const Model = use('Model')
 
 class Message extends Model {
+    thread () {
+        return this.belongsTo('APp/Models/Thread')
+    }
 }
 
 module.exports = Message

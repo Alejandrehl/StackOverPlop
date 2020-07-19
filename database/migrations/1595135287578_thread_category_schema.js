@@ -7,6 +7,7 @@ class ThreadCategorySchema extends Schema {
   up () {
     this.create('thread_categories', (table) => {
       table.increments()
+      table.string('name').notNullable()
       table.timestamps()
     })
   }

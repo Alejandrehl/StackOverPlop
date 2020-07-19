@@ -4,6 +4,9 @@
 const Model = use('Model')
 
 class Role extends Model {
+    users () {
+        return this.belongsToMany('App/Model/User').pivotTable('user_roles')
+    }
 }
 
 module.exports = Role

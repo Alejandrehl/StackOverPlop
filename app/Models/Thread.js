@@ -4,6 +4,13 @@
 const Model = use('Model')
 
 class Thread extends Model {
+    messages () {
+        return this.hasMany('App/Models/Message')
+    }
+
+    category () {
+        return this.belongsTo('App/Models/ThreadCategory')
+    }
 }
 
 module.exports = Thread

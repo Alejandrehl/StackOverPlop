@@ -7,6 +7,8 @@ class ImageSchema extends Schema {
   up () {
     this.create('images', (table) => {
       table.increments()
+      table.text('url').notNullable()
+      table.string('name').notNullable()
       table.timestamps()
     })
   }
